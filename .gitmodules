@@ -1,0 +1,3 @@
+[submodule "information_systems"]
+	path = information_systems
+	url = https://github.com/mrcdssclss/information_systems.git

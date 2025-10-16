@@ -1,0 +1,74 @@
+ git init opi/lab2
+ cd opi/lab2
+ git config user.name "red"
+ git config user.email "example1@gmail.com"
+git checkout -b branch1
+git add .
+git commit -m "r0"
+
+git checkout -b branch2
+git add .
+git commit --author="blue <example2@gmail.com>" -m "r1"
+
+git checkout -b branch3
+git add .
+git commit --author="blue <example2@gmail.com>" -m "r2"
+
+git checkout branch1
+git add .
+git commit -m "r3"
+
+git add .
+git commit -m "r4"
+
+git add .
+git commit -m "r5"
+
+git checkout branch2
+git add .
+git commit --author="blue <example2@gmail.com>" -m "r6"
+
+git checkout branch3
+git add .
+git commit --author="blue <example2@gmail.com>" -m "r7"
+
+git add .
+git commit --author="blue <example2@gmail.com>" -m "r8"
+
+
+git checkout branch2
+git add .
+git commit --author="blue <example2@gmail.com>" -m "r9"
+
+git add .
+git commit --author="blue <example2@gmail.com>" -m "r10"
+
+git checkout branch1
+git add .
+git commit -m "r11"
+
+git checkout branch3
+git add .
+git commit --author="blue <example2@gmail.com>" -m "r12"
+
+git checkout branch2
+git merge --no-commit branch3
+git add . #исправление конфликтов
+git commit --author="blue <example2@gmail.com>" -m "r13" 
+
+
+git checkout branch1
+git merge --no-commit branch2
+git add .
+git commit -m "r14"
+
+#можно вывести полную схему коммитов
+git log --graph --oneline
+
+#если хочется слияния с авторазрешением, то можно добавить:
+git merge -ours #если уверены, что наши изменения более существенные и оставлять нужно их 
+#или 
+git merge -theirs #если наоборот
+
+
+
